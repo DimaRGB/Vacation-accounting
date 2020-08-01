@@ -123,6 +123,22 @@
             <scope>test</scope>
         </dependency>
 
+
+
+<!--        to delete-->
+        <dependency>
+            <groupId>net.minidev</groupId>
+            <artifactId>json-smart</artifactId>
+            <version>2.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.nimbusds</groupId>
+            <artifactId>lang-tag</artifactId>
+            <version>1.5</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>

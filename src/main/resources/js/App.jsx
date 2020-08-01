@@ -1,6 +1,4 @@
 import React from 'react'
-import {BrowserRouter as Router, Redirect, Route} from "react-router-dom";
-import {isAuth} from "./Auth";
 import {toast} from "react-toastify";
 
 function App() {
@@ -13,9 +11,7 @@ function App() {
 
     return (
         <div className="App">
-            <Router>
-
-            </Router>
+           <p>HELLO!</p>
         </div>
     );
 }
