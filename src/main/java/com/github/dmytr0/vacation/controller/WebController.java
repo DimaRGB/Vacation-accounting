@@ -16,7 +16,7 @@ public class WebController {
     @Value("${google.domain.verification:}")
     private String googleVerification;
 
-    @RequestMapping({"/", "/policy", "/employees**/**", "/settings**/**", "/unauthorized**"})
+    @RequestMapping({"/", "/policy", "/vacations**/**", "/settings**/**", "/unauthorized**"})
     public String indexPage(ModelMap model, Principal principal) {
         model.addAttribute("authorized", principal != null);
         return "index";

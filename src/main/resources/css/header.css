@@ -1,0 +1,35 @@
+header {
+    width: 100%;
+    position: fixed;
+    background: #333;
+    color: #fff;
+    top: 0;
+    z-index: 10;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 18px 25px;
+    display: inline-block;
+}
+
+header .nav-links {
+    float: right;
+}
+
+header .company-logo {
+    float: left;
+    padding: 5px;
+}
+
+header .logout-section {
+    float: right;
+    padding: 11px;
+}
+
+header .company-logo img {
+    max-height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}

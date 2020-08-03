@@ -1,6 +1,7 @@
 package com.github.dmytr0.vacation.controller;
 
 import com.github.dmytr0.vacation.dto.CreateVacationRecordsDto;
+import com.github.dmytr0.vacation.dto.UserVacationsDto;
 import com.github.dmytr0.vacation.dto.UserVacationsStats;
 import com.github.dmytr0.vacation.service.VacationCalculationService;
 import com.github.dmytr0.vacation.service.VacationService;
@@ -11,10 +12,11 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.time.LocalDate;
+import java.util.List;
 
 @Log4j2
 @RestController
-@RequestMapping("vacations")
+@RequestMapping("api/vacations")
 @RequiredArgsConstructor
 public class VacationController {
 
@@ -37,6 +39,11 @@ public class VacationController {
         log.info("Request to create vacation records {} from user {}", createVacationRecordsDto, authenticationFacade.getCurrentUserName());
         validateUser(createVacationRecordsDto.getUserName());
         vacationService.createRecord(createVacationRecordsDto);
+    }
+
+    @GetMapping
+    public List<UserVacationsDto> getVacationRecords() {
+        return vacationService.getVacationRecords();
     }
 
 

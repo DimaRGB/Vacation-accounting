@@ -1,7 +1,7 @@
 package com.github.dmytr0.vacation.config;
 
-import com.github.dmytr0.vacation.converter.DateToLocalDateTimeConverter;
-import com.github.dmytr0.vacation.converter.LocalDateTimeToDateConverter;
+import com.github.dmytr0.vacation.converter.DateToLocalDateConverter;
+import com.github.dmytr0.vacation.converter.LocalDateToStringConverter;
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
 import com.mongodb.MongoClientURI;
@@ -49,8 +49,8 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
     @Override
     public CustomConversions customConversions() {
         List<Converter<?, ?>> converters = new ArrayList<>();
-        converters.add(new LocalDateTimeToDateConverter());
-        converters.add(new DateToLocalDateTimeConverter());
+        converters.add(new LocalDateToStringConverter());
+        converters.add(new DateToLocalDateConverter());
         return new CustomConversions(CustomConversions.StoreConversions.NONE, converters);
     }
 

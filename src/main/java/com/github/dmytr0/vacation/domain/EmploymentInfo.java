@@ -14,4 +14,9 @@ public class EmploymentInfo {
     private String _id;
     private String userName;
     private LocalDate employmentDate;
+
+    public EmploymentInfo(String userName, LocalDate employmentDate) {
+        this.userName = userName;
+        this.employmentDate = employmentDate;
+    }
 }

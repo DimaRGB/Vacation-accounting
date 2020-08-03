@@ -2,6 +2,8 @@ package com.github.dmytr0.vacation.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
 import javax.persistence.Entity;
 import java.time.LocalDateTime;
@@ -12,11 +14,14 @@ import java.util.UUID;
 
 @Data
 @Entity(name = "users")
+@EqualsAndHashCode(exclude = "_id")
+@Accessors(chain = true)
 public class User {
 
     @JsonProperty("id")
     private String _id;
     private String name;
+    private String team;
     private String userpic;
     private String email;
     private Map<String, String> extData = new HashMap<>();

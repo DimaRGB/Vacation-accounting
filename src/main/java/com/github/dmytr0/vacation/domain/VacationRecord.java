@@ -1,5 +1,6 @@
 package com.github.dmytr0.vacation.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -13,6 +14,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class VacationRecord {
 
+    @JsonProperty("id")
     private String _id;
     private String userName;
     private LocalDate recordDate;
